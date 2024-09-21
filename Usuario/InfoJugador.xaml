@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GALTMA.Usuario.InfoJugador"
+             Title="InfoJugador">
+
+    <!--Colores de fondo-->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0" Color="#D5241E" />
+            <GradientStop Offset="1" Color="#FCDF25" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+
+
+
+    <ScrollView>
+
+        <Grid VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Logo tipo del club -->
+            <Grid Padding="0" VerticalOptions="Center" HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame WidthRequest="400" HeightRequest="400"
+               CornerRadius="400" BorderColor="Transparent" BackgroundColor="Transparent"
+               Grid.Column="0">
+                    <Image Source="coras.png" Aspect="AspectFill"/>
+                </Frame>
+
+                <Label Text="CORAS FC" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="150"/>
+            </Grid>
+
+            <!-- Entradas para información de jugadores -->
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+
+                <Entry x:Name="ePlayera" Keyboard="Text" Placeholder="Playera" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1"  />
+                <Entry x:Name="eNom" Keyboard="Text" Placeholder="Nombre" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="1" />
+                <Entry x:Name="eApellidoPa" Keyboard="Text" Placeholder="Apellido Paterno" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="2" Grid.Column="1"/>
+                <Entry x:Name="eApellidoMa" Keyboard="Text" Placeholder="Apellido Materno" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" IsEnabled="False" Grid.Row="3" Grid.Column="1"/>
+                <Entry x:Name="ePosicion" Keyboard="Text" Placeholder="Posicion" Margin="10" TextColor="White" Background="Black" IsEnabled="False" Grid.Row="4" Grid.Column="1"/>
+                <Entry x:Name="eEstatura" Keyboard="Numeric" Placeholder="Estatura" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" IsEnabled="False" Grid.Row="5" Grid.Column="1"/>
+                <Entry x:Name="eEdad" Keyboard="Numeric" Placeholder="Edad" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" IsEnabled="False" Grid.Row="6" Grid.Column="1"/>
+            </Grid>
+        </Grid>
+
+    </ScrollView>
+
+
+</ContentPage>

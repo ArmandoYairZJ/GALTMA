@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GALTMA.Nutriologo.MedicionesAntro"
+             Shell.NavBarIsVisible="False"
+             Title="MedicionesAntro">
+
+    <!--Colores de fondo-->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0" Color="#D5241E" />
+            <GradientStop Offset="1" Color="#FCDF25" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <StackLayout>
+            <Label HorizontalOptions="Center" FontSize="Title" TextColor="Black" >Medidas Antropometricas</Label>
+            
+            <!--Entry para buscar Jugador-->
+            
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Entry x:Name="eplayera" Keyboard="Numeric" Placeholder="Numero de camiseta" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" />
+                <Button x:Name="btnBuscar" Text="Buscar" TextColor="White" BackgroundColor="Black" Background="Black" CornerRadius="10" Margin="10" Clicked="btnBuscar_Clicked"/>
+            </HorizontalStackLayout>
+            
+
+            <!--Datos que se deben agregar en automatico despues de la busqueda-->
+           
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+               
+
+
+                </Grid.ColumnDefinitions>
+                
+    
+                    <Entry x:Name="eNom" Keyboard="Text" Placeholder="Nombre" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+                    <Entry x:Name="eApellidoPa" Keyboard="Text" Placeholder="Apellido Paterno" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="2"/>
+                    <Entry x:Name="eApellidoMa" Keyboard="Text" Placeholder="Apellido Materno" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="3"/>
+                    <Entry x:Name="ePosicion" Keyboard="Text" Placeholder="Posicion" Margin="10" TextColor="White" Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="1"/>
+                    <Entry x:Name="eEstatura" Keyboard="Numeric" Placeholder="Estatura" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="2"/>
+                    <Entry x:Name="eEdad" Keyboard="Numeric" Placeholder="Edad" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="3"/>
+                    <Entry x:Name="ePeso" Keyboard="Numeric" Placeholder="Peso" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" Grid.Row="2" Grid.Column="1"/>
+               
+            </Grid>
+
+            <!-- Medidas Pliegues -->
+            <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label HorizontalOptions="Center" FontSize="Title" TextColor="Black" >PLIEGUES</Label>
+            </VerticalStackLayout>
+
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                  
+
+                </Grid.ColumnDefinitions>
+
+                <!--Triceps-->
+                <Label Text="TRICEPS" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraP" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="eResulrP" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="0" Grid.Column="2" IsEnabled="False" />
+
+
+                <!--Subescapular-->
+                <Label Text="SUBESCAPULAR" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraS" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="1" Grid.Column="1"/>
+                
+                <Entry x:Name="eResultS" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="1" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Biceps-->
+                <Label Text="BICEPS" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraB" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="2" Grid.Column="1" />
+               
+                <Entry x:Name="eResulrB" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="2" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Cresta Iliaca-->
+                <Label Text="CRESTA ILIACA" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraCL" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="3" Grid.Column="1"/>
+              
+                <Entry x:Name="eResultCL" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="3" Grid.Column="2" IsEnabled="False"/>
+
+                <!--Supraespinal-->
+                <Label Text="SUPRAESPINAL" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraSL" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="4" Grid.Column="1"/>
+               
+                <Entry x:Name="eResultSL" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="4" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Adbominal-->
+                <Label Text="ABDOMINAL" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraAB" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="5" Grid.Column="1" />
+              
+                <Entry x:Name="eResultAB" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="5" Grid.Column="2"  IsEnabled="False"/>
+
+
+                <!--Pectoral-->
+                <Label Text="PECTORAL" Grid.Row="6" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraPEC" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="6" Grid.Column="1"/>
+     
+                <Entry x:Name="eResultPEC" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="6" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Axial Medial-->
+                <Label Text="AXIAL MEDIAL" Grid.Row="7" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraAX" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="7" Grid.Column="1"/>
+               
+                <Entry x:Name="eResultAX" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="7" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Muslo Frontal-->
+                <Label Text="MUSLO FRONTAL" Grid.Row="8" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraMSF" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="8" Grid.Column="1"/>
+
+                <Entry x:Name="eResultMSF" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="8" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Pantorilla-->
+                <Label Text="PANTORILLA" Grid.Row="9" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraPANTO" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="9" Grid.Column="1"/>
+                
+                <Entry x:Name="eResultPANTO" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="9" Grid.Column="2" IsEnabled="False"/>
+
+
+
+
+            </Grid>
+
+            <!--Circunferencias-->
+            <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label HorizontalOptions="Center" FontSize="Title" TextColor="Black" >CIRCUNFERENCIAS</Label>
+            </VerticalStackLayout>
+
+            <Grid RowSpacing="10" ColumnSpacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                 
+
+                </Grid.ColumnDefinitions>
+
+                <!--Cuello-->
+                <Label Text="CUELLO" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraCUE" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="0" Grid.Column="1"/>
+            
+                <Entry x:Name="eResultCUE" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="0" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Brazo Relajado-->
+                <Label Text="BRAZO RELAJADO" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraBRJ" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="1" Grid.Column="1"/>
+                
+                <Entry x:Name="eResultBRJ" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="1" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Brazo Contraido-->
+                <Label Text="BRAZO CONTRAIDO" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraBCO" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="2" Grid.Column="1"/>
+  
+                <Entry x:Name="eResultBCO" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="2" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Antebrazo-->
+                <Label Text="ANTEBRAZO" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraATB" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="3" Grid.Column="1"/>
+              
+                <Entry x:Name="eResultATB" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="3" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Muñeca-->
+                <Label Text="MUÑECA" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraMNC" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="4" Grid.Column="1"/>
+
+                <Entry x:Name="eResultMNC" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="4" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Mesoesternal-->
+                <Label Text="MESOESTERNAL" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraMSL" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="5" Grid.Column="1"/>
+             
+                <Entry x:Name="eResultMSL" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="5" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Cintura-->
+                <Label Text="CINTURA" Grid.Row="6" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraCTA" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="6" Grid.Column="1"/>
+    
+                <Entry x:Name="eResultCTA" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="6" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Abdomen-->
+                <Label Text="ABDOMEN" Grid.Row="7" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraABC" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="7" Grid.Column="1"/>
+           
+                <Entry x:Name="eResultABC" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="7" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Cadera-->
+                <Label Text="CADERA" Grid.Row="8" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraCDR" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="8" Grid.Column="1"/>
+             
+                <Entry x:Name="eResultACDR" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="8" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Muslo(1cm)-->
+                <Label Text="Muslo1cm" Grid.Row="9" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraMCM" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="9" Grid.Column="1" />
+  
+                <Entry x:Name="eResultMCM" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="9" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Muslo Medio-->
+                <Label Text="MUSLO MEDIO" Grid.Row="10" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraMMO" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="10" Grid.Column="1"/>
+           
+                <Entry x:Name="eResultMMO" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="10" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Pantorilla Medial-->
+                <Label Text="PANTORILLA MEDIAL" Grid.Row="11" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraPTM" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="11" Grid.Column="1"/>
+           
+                <Entry x:Name="eResultPTM" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="11" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Tobillo-->
+                <Label Text="TOBILLO" Grid.Row="12" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraTLL" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="12" Grid.Column="1" />
+
+                <Entry x:Name="eResultTLL" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="12" Grid.Column="2" IsEnabled="False"/>
+
+            </Grid>
+
+            <!--Diametro-->
+            <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label HorizontalOptions="Center" FontSize="Title" TextColor="Black" >DIAMETRO</Label>
+            </VerticalStackLayout>
+
+            <Grid RowSpacing="10" ColumnSpacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    
+         
+
+                </Grid.ColumnDefinitions>
+
+                <!--Biepicondilio del Humero-->
+                <Label Text="BIOPICONDILIO DEL HUMERO" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraBDH" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="0" Grid.Column="1"/>
+         
+                <Entry x:Name="eResultBDH" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black"  Grid.Row="0" Grid.Column="2" IsEnabled="False"/>
+
+                <!--Biestiloideo de la muñeca-->
+                <Label Text="BIESTILOIDEO DE LA MUÑECA" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraBDLM" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="1" Grid.Column="1"/>
+       
+                <Entry x:Name="eResultBDLM" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="1" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Bicondileo Femur-->
+                <Label Text="BICONDILEO FEMUR" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraBOF" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="2" Grid.Column="1"/>
+              
+                <Entry x:Name="eResultBOF" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="2" Grid.Column="2" IsEnabled="False"/>
+
+
+                <!--Bimaleolar-->
+                <Label Text="Bimaleolar" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"  VerticalOptions="Center" TextColor="Black"/>
+                <Entry x:Name="ePrimeraBMLA" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="3" Grid.Column="1"/>
+  
+                <Entry x:Name="eResultBMLA" Keyboard="Numeric" Placeholder="" Margin="10" TextColor="White" Background="Black" BackgroundColor="Black" Grid.Row="3" Grid.Column="2" IsEnabled="False"/>
+
+
+            </Grid>
+
+
+
+            <!--Boton de Guardar-->
+            <HorizontalStackLayout HorizontalOptions="Center" Padding="20" Margin="20">
+                <Button x:Name="btnGuardarRefistro" Text="Guardar Registro" Background="Black" BackgroundColor="Black" TextColor="White" Clicked="btnGuardarRefistro_Clicked"/>
+
+            </HorizontalStackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

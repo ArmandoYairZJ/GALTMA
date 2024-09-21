@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GALTMA.ServicioRegistro.DaDBaja"
+             Shell.NavBarIsVisible="False"
+
+             Title="DaDBaja">
+
+
+    <!--Colores de fondo-->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0" Color="#D5241E" />
+            <GradientStop Offset="1" Color="#FCDF25" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout>
+
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+            <Label TextColor="Black" FontSize="Title" >Dar De Baja Jugador</Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout HorizontalOptions="FillAndExpand">
+         
+            <Entry x:Name="eCamiseta" Keyboard="Text" Placeholder="Camiseta" Margin="10" TextColor="White" Background="Black"/>
+            <Button x:Name="btnBuscar" TextColor="White" Background="Black" Text="Buscar" Clicked="btnBuscar_Clicked"/>
+
+            <!--Datos del Jugador-->
+            <Entry x:Name="eNombre" Keyboard="Text" Placeholder="Nombre" Margin="10" TextColor="White" Background="Black" IsEnabled="False"/>
+            <Entry x:Name="eApellidoPaterno" Keyboard="Text" Placeholder="Apellido Paterno" Margin="10" TextColor="White" Background="Black" IsEnabled="False"/>
+            <Entry x:Name="eApellidoMaterno" Keyboard="Text" Placeholder="Apellido Materno" Margin="10" TextColor="White" Background="Black" IsEnabled="False"/>
+            <Entry x:Name="ePosicion" Keyboard="Text" Placeholder="Posicion" Margin="10" TextColor="White" Background="Black" IsEnabled="False"/>
+            <Entry x:Name="eEstatura" Keyboard="Text" Placeholder="Estatura" Margin="10" TextColor="White" Background="Black" IsEnabled="False"/>
+            <Entry x:Name="eEdad" Keyboard="Numeric" Placeholder="Edad" Margin="10" TextColor="White" Background="Black" IsEnabled="False"/>
+
+
+
+            <Button x:Name="btnEliminar" TextColor="White" Background="Black" Text="Eliminar" Clicked="btnEliminar_Clicked"/>
+
+
+        </VerticalStackLayout>
+
+    
+
+  
+    </StackLayout>
+   
+</ContentPage>

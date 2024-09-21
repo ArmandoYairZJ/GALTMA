@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GALTMA.Nutriologo.Masa"
+             Title="Masa">
+    <!--Colores de fondo-->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0" Color="#D5241E" />
+            <GradientStop Offset="1" Color="#FCDF25" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <StackLayout>
+
+            <!--Entry para buscar Jugador-->
+            <Label HorizontalOptions="Center" FontSize="26"  TextColor="Black"  Text="DENSIDAD CORPORAL" />
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+               
+         
+                <Entry x:Name="eplayera" Keyboard="Numeric" Placeholder="Numero de camiseta" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" />
+                   
+                <Button x:Name="btnBuscar" Text="Buscar" TextColor="White" BackgroundColor="Black" Background="Black" CornerRadius="10" Margin="10" Clicked="btnBuscar_Clicked" />
+           
+            </HorizontalStackLayout>
+                
+                
+
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="eNom" Keyboard="Text" Placeholder="Nombre" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="eBicipital" Keyboard="Numeric" Placeholder="Pliegue Bicipatal" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="2"/>
+                <Entry x:Name="eTricipal" Keyboard="Numeric" Placeholder="Pliegue Tricipal" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="3"/>
+                <Entry x:Name="eSuprailiaco" Keyboard="Numeric" Placeholder="Pliegue Suprailiaco" Margin="10" TextColor="White" Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="esubescapular" Keyboard="Numeric" Placeholder="Pliegue Subescauplar" Margin="10" TextColor="White" BackgroundColor="Black"  Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="2"/>
+                <Entry x:Name="eMasaGrasa" Keyboard="Numeric" Placeholder="Densidad Grasa" Margin="10" TextColor="White" BackgroundColor="Black"  Background="DarkRed" IsEnabled="False" Grid.Row="1" Grid.Column="3"/>
+
+            </Grid>
+
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label HorizontalOptions="Center" FontSize="26"  TextColor="Black"  Text="MASA GRASA" />
+                
+            </HorizontalStackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="Epeso" Keyboard="Text" Placeholder="Peso" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="eGrasa" Keyboard="Numeric" Placeholder="Masa Grasa" Margin="10" TextColor="White" BackgroundColor="Black" Background="DarkRed" IsEnabled="False" Grid.Row="0" Grid.Column="2"/>
+
+
+            </Grid>
+            
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label HorizontalOptions="Center" FontSize="26"  TextColor="Black"  Text="MASA LIBRE" />
+
+            </HorizontalStackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="EPESO" Keyboard="Text" Placeholder="Peso" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="EFFM" Keyboard="Numeric" Placeholder="Masa Libre" Margin="10" TextColor="White" BackgroundColor="Black" Background="DarkRed" IsEnabled="False" Grid.Row="0" Grid.Column="2"/>
+
+
+            </Grid>
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label HorizontalOptions="Center" FontSize="26"  TextColor="Black"  Text="Porcentaje De Masa Corporal" />
+
+            </HorizontalStackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="eporce" Keyboard="Text" Placeholder="Densidad" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="ersuk" Keyboard="Numeric" Placeholder="Grasa Corporal" Margin="10" TextColor="White" BackgroundColor="Black" Background="DarkRed" IsEnabled="False" Grid.Row="0" Grid.Column="2"/>
+
+
+            </Grid>
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label HorizontalOptions="Center" FontSize="26"  TextColor="Black"  Text="Mas Medidas" />
+
+            </HorizontalStackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="eagua" Keyboard="Text" Placeholder="Porcentaje de Agua" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+                
+                <Entry x:Name="eMusculo" Keyboard="Text" Placeholder="Músculo" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="2" />
+
+                <Entry x:Name="emasaosea" Keyboard="Text" Placeholder="Masa osea" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="2" Grid.Column="1" />
+                <Entry x:Name="emasaresidual" Keyboard="Text" Placeholder="Masa Residual" Margin="10" TextColor="White" BackgroundColor="Black" Background="DarkRed" IsEnabled="False" Grid.Row="2" Grid.Column="2" />
+
+            </Grid>
+
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label HorizontalOptions="Center" FontSize="26"  TextColor="Black"  Text="Porcentaje De Tipo De Cuerpo Endoforfia" />
+
+            </HorizontalStackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                   
+
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*" />
+              
+
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="eEndoforfia" Keyboard="Text" Placeholder="Endoforfia" Margin="10" TextColor="White" BackgroundColor="Black" Background="DarkRed" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+
+
+            </Grid>
+
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label HorizontalOptions="Center" FontSize="26"  TextColor="Black"  Text="Porcentaje De Tipo De Cuerpo Mesomorfia" />
+
+            </HorizontalStackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="eBiepicondiliodelhumero" Keyboard="Text" Placeholder="Biepicondilio del humero" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="eBiestiloideodelamuneca" Keyboard="Text" Placeholder="Biestiloideo de la muñeca" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="2" />
+                <Entry x:Name="eBicondileoFemur" Keyboard="Text" Placeholder="Bicondileo Femur" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="3" />
+                <Entry x:Name="eBimaleolar" Keyboard="Text" Placeholder="Bimaleolar" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="4" />
+                <Entry x:Name="eBrazoContraido" Keyboard="Text" Placeholder="Brazo Contraido" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="1" />
+                <Entry x:Name="ePantorillaMedial" Keyboard="Text" Placeholder="Pantorilla Medial" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="2" />
+                <Entry x:Name="eAltura" Keyboard="Text" Placeholder="Estatura" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="1" Grid.Column="3" />
+                <Entry x:Name="eMesomorfia" Keyboard="Text" Placeholder="Mesomorfia" Margin="10" TextColor="White" BackgroundColor="Black" Background="DarkRed" IsEnabled="False" Grid.Row="1" Grid.Column="4" />
+
+
+            </Grid>
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label HorizontalOptions="Center" FontSize="26"  TextColor="Black"  Text="Porcentaje De Tipo De Cuerpo Ectomorfia" />
+
+            </HorizontalStackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                 
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                
+
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="eAlturas" Keyboard="Text" Placeholder="Altura" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="1" />
+                <Entry x:Name="ePesos" Keyboard="Text" Placeholder="Peso" Margin="10" TextColor="White" BackgroundColor="Black" Background="Black" IsEnabled="False" Grid.Row="0" Grid.Column="2" />
+                <Entry x:Name="eectomorfia" Keyboard="Text" Placeholder="Ectomorfia" Margin="10" TextColor="White" BackgroundColor="Black" Background="DarkRed" IsEnabled="False" Grid.Row="0" Grid.Column="3" />
+
+
+            </Grid>
+
+
+
+            <!--Boton de Guardar-->
+            <HorizontalStackLayout HorizontalOptions="Center" Padding="20" Margin="20">
+                <Button x:Name="btnGuardarRefistro" Text="Guardar Registro" Background="Black" BackgroundColor="Black" TextColor="White" Clicked="btnGuardarRefistro_Clicked" />
+
+            </HorizontalStackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

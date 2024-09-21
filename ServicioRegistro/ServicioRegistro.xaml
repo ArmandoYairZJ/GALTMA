@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GALTMA.ServicioRegistro.ServicioRegistro"
+             Shell.NavBarIsVisible="False"
+             Title="ServicioRegistro">
+    
+    <!--Colores de fondo-->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0" Color="#D5241E" />
+            <GradientStop Offset="1" Color="#FCDF25" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+
+    <ScrollView>
+        <StackLayout Spacing="10" >
+            <Label HorizontalOptions="Center" FontSize="Title" TextColor="Black">Registro de Jugadores</Label>
+
+            <!--Datos del Jugador-->
+            <Entry x:Name="eNumero" Keyboard="Numeric" Placeholder="Numero de camiseta" Margin="10" TextColor="White" Background="Black"/>
+            <Entry x:Name="eNombre" Keyboard="Text" Placeholder="Nombre" Margin="10" TextColor="White" Background="Black"/>
+            <Entry x:Name="eApellidoPaterno" Keyboard="Text" Placeholder="Apellido Paterno" Margin="10" TextColor="White" Background="Black"/>
+            <Entry x:Name="eApellidoMaterno" Keyboard="Text" Placeholder="Apellido Materno" Margin="10" TextColor="White" Background="Black"/>
+            <Entry x:Name="ePosicion" Keyboard="Text" Placeholder="Posicion" Margin="10" TextColor="White" Background="Black"/>
+            <Entry x:Name="eEstatura" Keyboard="Text" Placeholder="Estatura" Margin="10" TextColor="White" Background="Black"/>
+            <Entry x:Name="eEdad" Keyboard="Numeric" Placeholder="Edad" Margin="10" TextColor="White" Background="Black"/>
+            <Entry x:Name="eContra"  IsPassword="True" Placeholder="Contraseña" Margin="10" TextColor="White" Background="Black"/>
+            <Entry x:Name="eContraConfi"   IsPassword="True" Placeholder="Confirmar Contraseña" Margin="10" TextColor="White" Background="Black"/>
+
+            <!--Boton para Guardar-->
+            <Button x:Name="btnGuardarregistro" Text="Guardar Registro" Background="Black" BackgroundColor="Black" TextColor="White" Clicked="btnGuardarregistro_Clicked"/>
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
